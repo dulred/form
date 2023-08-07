@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 请求方式 -->
+    <!-- 使用form标签的method属性，可以控制form表单的提交方式，该属性可以省略，若省略，默认的提交方式是get -->
+
+    <!-- get -->
+    <form action="/server.php" method="get">
+        <p>账号：<input type="text" name="loginid"></p>
+        <p>密码：<input type="password" name="loginpwd"></p>
+        <p><button type="submit">提交</button></p>
+    </form>
+    <!-- post -->
+    <form action="/server.php" method="post">
+        <p>账号：<input type="text" name="loginid"></p>
+        <p>密码：<input type="password" name="loginpwd"></p>
+        <p><button type="submit">提交</button></p>
+    </form>
+
+    <!-- 多选框 -->
+    <form method="post" action="test.php">
+        <p>
+            爱好：  <label><input type="checkox" name="like" value="football">足球</label>
+            <label><input type="checkox" name="like" value="basketball">篮球</label>
+            <label><input type="checkox" name="like" value="music">音乐</label>
+            <label><input type="checkox" name="like" value="movie">电影</label>
+            <label><input type="checkox" name="like" value="read">阅读</label>
+        </p>
+        <p><input type="submit" value="提交"></p></form>
+ <!-- 则向服务器发送的消息体为：
+
+like=football&like=music&like=read
+
+仔细看上面发送的内容，你会发现出现了重复的键，http协议允许在请求时出现重复的键，无论是用哪种语言作为服务端，也都可以处理请求数据中的重复键，完全不必担心。
+
+特别注意，发送到服务器的是选中项的value值，而不是后面的文本 -->
+</body>
+</html>
