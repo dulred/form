@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 使用get提交所有文件类型 -->
+
+    <!-- 一、表单类型之简单类型 -->
+    <!-- 1.1 text password -->
+
+    <form action="http://localhost:8080/TestForm" method="get">
+        <p>账号：<input type="text" name="loginid"> </p>
+        <p>密码：<input type="password" name="loginpwd"> </p>
+        <input type="image" id="image" alt="fsafa" src="/media/examples/login-button.png" />
+
+        <p><button type="submit">提交</button></p>
+    </form>
+    
+    <!-- 1.2 radio checkbox -->
+
+    <fieldset>
+        <legend>Choose your monster's features:</legend>
+        <form action="http://localhost:8080/TestForm"  method="post"  >
+            <div>
+                <input type="checkbox" id="scales" name="scales" value="scales"  />
+                <label for="scales">Scales</label>
+
+                <input type="checkbox" id="gg" name="scales"  value="gg" />
+                <label for="gg">gg</label>
+
+                <input type="checkbox" id="ee" name="scales" value="ee" />
+                <label for="ee">fee</label>
+              </div>
+            
+              <div>
+                <input type="radio" id="horns" name="horns"   value="horns"/>
+                <label for="horns">Horns</label>
+                <input type="radio" id="hh" name="horns"  value="hh" />
+                <label for="hh">hh</label>
+              </div>
+
+              <!-- <div>
+                <textarea name="text" id="" cols="30" rows="10"></textarea>
+              </div>
+              <p><button type="submit">提交</button></p> -->
+        </form>
+     
+      </fieldset>
+    
+
+
+
+    <!-- 二、表单类型之复杂类型 -->
+    <!-- 2.1 复选框 -->
+
+
+
+
+
+
+    <!-- 三、业务实践 -->
+
+
+
+
+
+</body>
+</html>

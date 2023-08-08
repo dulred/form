@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>验证表单的案例</title>
+</head>
+<body>
+<h1>验证表单的案例</h1>
+<form name="form1" id="f1" action="http://localhost:8080/TestForm" method="post">
+        姓名：<input type="text" name="userName" id="uName">
+        <br/>
+        年龄：<input type="text" name="age" id="uAge">
+        <br/>
+        密码：<input type="password" name="pwd" id="myPwd">
+        <br/>
+        重复密码：<input type="password" name="repeatPwd" id="myRepeatPwd">
+<br/>
+<!-- 
+虽然复选框设置了 name属性，但是如果复选框不选中，是不会提交到服务器端的，只
+有选中了的复选框，才会提交到服务器端
+ -->
+爱好：<input type="checkbox" name="hobby" id="myHobby" value="football">足球
+<input type="checkbox" name="hobby" id="myHobby" value="badminton">羽毛球
+<input type="checkbox" name="hobby" id="myHobby" value="basketball">篮球
+<input type="checkbox" name="hobby" id="myHobby" value="billiards">台球
+<br/>
+备注：<textarea rows="3" cols="30" id="remarks" name="cc"></textarea>
+<br/>
+<!-- 只有设置了 name 属性的表单元素才能在提交表单时传递它们的值 -->
+测试字段:<input type="text" id="test" value="本文本框故意不设置name属性，看服务器端能不能接收到">
+<br/>
+<!-- 
+onclick="checkForm();"这句话中的;分号也可以省略不写，但是如果有多行js代
+码的话，那就要在每行js代码后面加上;分号，最后一行js代码后面可以不写;分号，也可以写上;分号
+ -->
+<input type="button" value="js验证表单" onclick="checkForm();">
+<input type="submit" value="提交到servlet">
+</form>
+</body>
+</html>
